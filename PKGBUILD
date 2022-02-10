@@ -7,6 +7,7 @@ arch=('any')
 url="https://github.com/jfedak/testpkg"
 license=('GPL')
 depends=('python')
+makedepends=('git')
 source=("testkuba::git://github.com/jfedak/testpkg.git")
 md5sums=("SKIP")
 
