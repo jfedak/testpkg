@@ -6,12 +6,12 @@ all:
 	@echo Run \'make uninstall\' to uninstall testkuba
 
 install:
-	@mkdir -p $(PREFIX)/bin
-	@cp -p main.py $(PREFIX)/bin/testkuba
-	@mkdir -p $(DOCDIR)
-	@cp -p README.md $(DOCDIR)
-	@chmod 755 $(PREFIX)/bin/testkuba
+	@mkdir -p $(DESTDIR)$(PREFIX)/bin
+	@cp -p main.py $(DESTDIR)$(PREFIX)/bin/testkuba
+	@mkdir -p $(DESTDIR)$(DOCDIR)
+	@cp -p README.md $(DESTDIR)$(DOCDIR)
+	@chmod 755 $(DESTDIR)$(PREFIX)/bin/testkuba
 
 uninstall:
-	@rm -rf $(PREFIX)/bin/testkuba
-	@rm -rf $(DOCDIR)
+	@rm -rf $(DESTDIR)$(PREFIX)/bin/testkuba
+	@rm -rf $(DESTDIR)$(DOCDIR)
